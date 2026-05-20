@@ -1,8 +1,46 @@
 .contacts-section {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3e5f5;
+  background-color: var(--bg-contacts);
+}
+
+/* Macchia organica in basso a destra */
+.contacts-section .blob-dark {
+  width: 50vw;
+  height: 45vw;
+  bottom: -10%;
+  right: -10%;
+  background-color: var(--blob-contacts);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.contacts-section .blob-light {
+  width: 46vw;
+  height: 48vw;
+  bottom: -6%;
+  right: -6%;
+  background-color: var(--blob-contacts);
+  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+}
+
+/* Mobile: blob ingranditi del 50% */
+@media (max-width: 768px) {
+  .contacts-section .blob-dark {
+    width: 75vw;
+    height: 67.5vw;
+    bottom: -14%;
+    right: -14%;
+  }
+
+  .contacts-section .blob-light {
+    width: 69vw;
+    height: 72vw;
+    bottom: -10%;
+    right: -10%;
+  }
 }

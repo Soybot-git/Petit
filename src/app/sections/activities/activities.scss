@@ -1,8 +1,46 @@
 .activities-section {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff3e0;
+  background-color: var(--bg-activities);
+}
+
+/* Macchia organica in basso a sinistra */
+.activities-section .blob-dark {
+  width: 50vw;
+  height: 45vw;
+  bottom: -10%;
+  left: -10%;
+  background-color: var(--blob-activities);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.activities-section .blob-light {
+  width: 48vw;
+  height: 50vw;
+  bottom: -6%;
+  left: -6%;
+  background-color: var(--blob-activities);
+  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+}
+
+/* Mobile: blob ingranditi del 50% */
+@media (max-width: 768px) {
+  .activities-section .blob-dark {
+    width: 75vw;
+    height: 67.5vw;
+    bottom: -14%;
+    left: -14%;
+  }
+
+  .activities-section .blob-light {
+    width: 72vw;
+    height: 75vw;
+    bottom: -10%;
+    left: -10%;
+  }
 }

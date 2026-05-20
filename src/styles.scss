@@ -6,6 +6,18 @@
   --secondary: #e07a5f;
   --tertiary: #f2cc8f;
   --text-dark: #2a3e3c;
+
+  /* Sfondi pastello per sezione */
+  --bg-home: #fdfbf7;
+  --bg-activities: #fff3e7;
+  --bg-services: #f5f0e8;
+  --bg-contacts: #f9f4f0;
+
+  /* Colori blob */
+  --blob-home: #3f928a;
+  --blob-activities: #e07a5f;
+  --blob-services: #f2cc8f;
+  --blob-contacts: #e09f8d;
 }
 
 body {
@@ -18,4 +30,73 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+/* Overlay di grana (noise) globale per rimuovere la sensazione "plastica" */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ========== BLOB SYSTEM ========== */
+
+/* Animazione morbida "respirazione" per il layer scuro */
+@keyframes blob-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(1.5%, -2%) scale(1.03);
+  }
+  66% {
+    transform: translate(-1%, 1.5%) scale(0.98);
+  }
+  100% {
+    transform: translate(0.5%, -0.5%) scale(1.01);
+  }
+}
+
+/* Animazione leggermente sfasata per il layer chiaro (effetto parallasse) */
+@keyframes blob-pulse {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-2%, 1%) scale(0.97);
+  }
+  66% {
+    transform: translate(1.5%, -1.5%) scale(1.02);
+  }
+  100% {
+    transform: translate(-0.5%, 0.5%) scale(1);
+  }
+}
+
+/* Base blob: forma organica irregolare */
+.blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  pointer-events: none;
+  will-change: transform;
+  filter: blur(2px);
+}
+
+/* Layer scuro: piú visibile, movimento principale */
+.blob-dark {
+  opacity: 0.16;
+  animation: blob-float 16s ease-in-out infinite alternate;
+}
+
+/* Layer chiaro: piú trasparente, movimento ritardato e inverso */
+.blob-light {
+  opacity: 0.08;
+  animation: blob-pulse 18s ease-in-out infinite alternate-reverse;
+  animation-delay: -2s;
 }
