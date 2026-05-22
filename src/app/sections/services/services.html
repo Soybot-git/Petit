@@ -1,5 +1,61 @@
 <section class="services-section">
   <div class="blob blob-dark"></div>
   <div class="blob blob-light"></div>
-  <h1>Servizi</h1>
+
+  <div class="services-content">
+    <h2 class="section-title">I nostri servizi</h2>
+
+    @defer (on viewport) {
+      <div class="services-grid">
+        @for (service of services; track service.title; let i = $index) {
+          <article class="service-card" [class]="'accent-' + (i % 4)">
+            <div class="blob-icon" aria-hidden="true">
+              @switch (i) {
+                @case (0) {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                }
+                @case (1) {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="6" cy="12" r="4"></circle>
+                    <circle cx="18" cy="12" r="4"></circle>
+                    <path d="M10 12h4"></path>
+                  </svg>
+                }
+                @case (2) {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 8v8"></path>
+                    <path d="M8 12h8"></path>
+                  </svg>
+                }
+                @case (3) {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12h2l2-7 4 14 4-10 4 10 2-7h2"></path>
+                  </svg>
+                }
+                @case (4) {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                }
+                @case (5) {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                }
+              }
+            </div>
+            <h3 class="card-title">{{ service.title }}</h3>
+            <p class="card-description">{{ service.description }}</p>
+          </article>
+        }
+      </div>
+    } @placeholder {
+      <div class="services-placeholder"></div>
+    }
+  </div>
 </section>
