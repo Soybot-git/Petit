@@ -1,6 +1,6 @@
 export const textMap = {
   home: {
-    text: "Dal 2018, Petit è lo spazio di supporto e riferimento per le famiglie nell'abilitazione e riabilitazione dei disturbi del neurosviluppo, in ogni fascia d'età. Ci prendiamo cura di ogni percorso in modo globale e completo: dallo screening e dalla diagnosi precoce, fino a interventi terapeutici specifici e personalizzati su misura per ogni esigenza."
+    text: "Petit è un centro polispecialistico dell'età evolutiva specializzato nell'abilitazione e riabilitazione dei disturbi del neurosviluppo in tutte le fasce d'età. Offriamo una presa in carico terapeutica globale e completa, ci occupiamo di diagnosi, screening e interventi precoci strutturati su percorsi terapeutici individualizzati e specifici. Grazie a un approccio multidisciplinare e a differenti metodologie riabilitative, seguiamo ogni paziente con la massima cura per garantirne il benessere e l'evoluzione."
   },
   services: [
     {
@@ -37,5 +37,11 @@ export const textMap = {
       title: "Petit Summer Camp: Socializzazione, Gioco e Crescita Speciale",
       description: "<p>L'estate è il momento perfetto per unire spensieratezza, crescita relazionale e inclusione. Per questo, il centro Petit sta progettando un <strong>campo estivo dedicato</strong>, sicuro, stimolante e guidato da specialisti. Il nostro obiettivo è offrire:</p><ul><li><strong>Divertimento e socializzazione:</strong> perfettamente integrati a un costante supporto educativo.</li><li><strong>Autonomia e crescita:</strong> percorsi mirati a valorizzare le potenzialità di ogni bambino.</li><li><strong>Qualità e attenzione:</strong> i dettagli logistici sono in via di definizione e i posti saranno limitati per garantire una cura terapeutica ottimale.</li></ul>"
     }
-  ]
+  ],
+  contacts: {
+    email: "infocentropetit@gmail.com",
+    telefono: "347 742 2644",
+    indirizzo: "Via Ciociaria, 11, 00162 Roma RM",
+    orari: "lunedi-venerdi 08:30-12:30, 14:30-19:00"
+  }
 }
