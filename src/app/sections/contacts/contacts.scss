@@ -177,7 +177,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .post-it-section {
@@ -260,12 +260,9 @@
 
 /* Toast di conferma */
 .toast-message {
-  position: absolute;
-  top: -0.5rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(-100%);
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
   background: var(--primary);
@@ -275,13 +272,22 @@
   border-radius: 50px;
   box-shadow: 0 4px 16px rgba(42,62,60,0.2);
   white-space: nowrap;
-  z-index: 20;
-  animation: toast-in 0.3s ease forwards;
 }
 
-@keyframes toast-in {
-  from { opacity: 0; transform: translateX(-50%) translateY(-80%); }
-  to { opacity: 1; transform: translateX(-50%) translateY(-100%); }
+.toast-in-place {
+  position: static;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  animation: toast-in-place 0.3s ease forwards;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+@keyframes toast-in-place {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .toast-icon {
@@ -384,25 +390,16 @@
   .desk-item:hover, .desk-item:focus-within { transform: translateY(-6px) scale(1.01) !important; }
 
   .post-it-content { grid-template-columns: 1fr; gap: 1rem; }
-  .post-it-section { text-align: left; }
-  .post-it-heading { justify-content: flex-start; }
+  .post-it-section { text-align: center; }
+  .post-it-heading { justify-content: center; }
 
   .notepad { height: auto; padding: 1.25rem; }
   .notepad-title { margin-bottom: 1rem; }
   .notepad-form { gap: 1.25rem; }
 
-  .toast-message {
-    position: fixed;
-    top: auto;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: toast-in-mobile 0.3s ease forwards;
-  }
-
-  @keyframes toast-in-mobile {
-    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast-in-place {
+    align-self: stretch;
+    width: 100%;
   }
 
   .desk-button { align-self: stretch; width: 100%; }
@@ -415,5 +412,5 @@
   .desk-item:hover, .desk-item:focus-within { transform: translateY(-4px) !important; }
   .map-placeholder { transition: none; }
   .form-field input, .form-field textarea, .desk-button { transition: none; }
-  .toast-message { animation: none; }
+  .toast-message, .toast-in-place { animation: none; }
 }

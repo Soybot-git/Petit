@@ -103,17 +103,6 @@
           </h3>
 
           <div class="form-wrapper">
-            <!-- Toast di conferma -->
-            @if (showToast()) {
-              <div class="toast-message" role="status" aria-live="polite">
-                <svg class="toast-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Messaggio inviato con successo!</span>
-              </div>
-            }
-
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="notepad-form" novalidate>
 
               <!-- Nome -->
@@ -172,23 +161,33 @@
                 </div>
               </div>
 
-              <!-- Pulsante -->
-              <button
-                type="submit"
-                class="desk-button"
-                [disabled]="isSubmitting()"
-              >
-                @if (isSubmitting()) {
-                  <svg class="spinner" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" stroke-dasharray="31.42 31.42" transform="rotate(-90 12 12)">
-                      <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
-                    </circle>
+              <!-- Pulsante / Toast di conferma -->
+              @if (showToast()) {
+                <div class="toast-message toast-in-place" role="status" aria-live="polite">
+                  <svg class="toast-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  Invio in corso...
-                } @else {
-                  Invia messaggio
-                }
-              </button>
+                  <span>Messaggio inviato con successo!</span>
+                </div>
+              } @else {
+                <button
+                  type="submit"
+                  class="desk-button"
+                  [disabled]="isSubmitting()"
+                >
+                  @if (isSubmitting()) {
+                    <svg class="spinner" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" stroke-dasharray="31.42 31.42" transform="rotate(-90 12 12)">
+                        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+                      </circle>
+                    </svg>
+                    Invio in corso...
+                  } @else {
+                    Invia messaggio
+                  }
+                </button>
+              }
             </form>
           </div>
         </article>
