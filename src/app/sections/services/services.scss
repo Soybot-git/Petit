@@ -1,32 +1,11 @@
 .services-section {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-services);
   padding: clamp(4rem, 10vh, 8rem) clamp(1rem, 5vw, 3rem);
-}
-
-/* Macchia organica in alto a sinistra */
-.services-section .blob-dark {
-  width: 45vw;
-  height: 50vw;
-  top: -10%;
-  left: -10%;
-  background-color: var(--blob-services);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
-.services-section .blob-light {
-  width: 42vw;
-  height: 46vw;
-  top: -6%;
-  left: -6%;
-  background-color: var(--blob-services);
-  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
 }
 
 .services-content {
@@ -44,6 +23,7 @@
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--text-dark);
   margin-bottom: clamp(2rem, 5vh, 4rem);
+  text-shadow: 0 2px 4px rgba(42, 62, 60, 0.15);
 }
 
 .services-grid {
@@ -161,22 +141,8 @@
   }
 }
 
-/* Mobile: blob ingranditi del 50% */
+/* Mobile */
 @media (max-width: 768px) {
-  .services-section .blob-dark {
-    width: 67.5vw;
-    height: 75vw;
-    top: -14%;
-    left: -14%;
-  }
-
-  .services-section .blob-light {
-    width: 63vw;
-    height: 69vw;
-    top: -10%;
-    left: -10%;
-  }
-
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;

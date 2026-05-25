@@ -20,9 +20,13 @@
   --blob-contacts: #e09f8d;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   font-family: 'Comfortaa', sans-serif;
   background-color: var(--background);
   color: var(--text-dark);
@@ -79,24 +83,4 @@ body::after {
   }
 }
 
-/* Base blob: forma organica irregolare */
-.blob {
-  position: absolute;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  pointer-events: none;
-  will-change: transform;
-  filter: blur(2px);
-}
-
-/* Layer scuro: piú visibile, movimento principale */
-.blob-dark {
-  opacity: 0.16;
-  animation: blob-float 16s ease-in-out infinite alternate;
-}
-
-/* Layer chiaro: piú trasparente, movimento ritardato e inverso */
-.blob-light {
-  opacity: 0.08;
-  animation: blob-pulse 18s ease-in-out infinite alternate-reverse;
-  animation-delay: -2s;
-}
+/* Le classi .blob, .blob-dark, .blob-light sono ora gestite globalmente in app.scss */

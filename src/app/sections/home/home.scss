@@ -1,46 +1,12 @@
 .home-section {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-home);
 }
 
-/* Macchia organica in alto a destra */
-.home-section .blob-dark {
-  width: 45vw;
-  height: 45vw;
-  top: -10%;
-  right: -10%;
-  background-color: var(--blob-home);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
-.home-section .blob-light {
-  width: 42vw;
-  height: 48vw;
-  top: -6%;
-  right: -6%;
-  background-color: var(--blob-home);
-  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
-}
-
-/* Mobile: blob ingranditi del 50% */
-@media (max-width: 768px) {
-  .home-section .blob-dark {
-    width: 67.5vw;
-    height: 67.5vw;
-    top: -14%;
-    right: -14%;
-  }
-
-  .home-section .blob-light {
-    width: 63vw;
-    height: 72vw;
-    top: -10%;
-    right: -10%;
-  }
+.home-section h1 {
+  text-shadow: 0 2px 4px rgba(42, 62, 60, 0.15);
 }

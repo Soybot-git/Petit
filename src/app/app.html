@@ -1,6 +1,21 @@
 <div class="scroll-container">
-  <app-home class="snap-section"/>
-  <app-services class="snap-section"/>
-  <app-activities class="snap-section"/>
-  <app-contacts class="snap-section"/>
+  <div class="page-content">
+    <!-- Blob globali: fluttuano sopra il gradiente di background -->
+    <div class="global-blob global-blob-dark blob-home-dark" aria-hidden="true"></div>
+    <div class="global-blob global-blob-light blob-home-light" aria-hidden="true"></div>
+    <div class="global-blob global-blob-dark blob-services-dark" aria-hidden="true"></div>
+    <div class="global-blob global-blob-light blob-services-light" aria-hidden="true"></div>
+    <div class="global-blob global-blob-dark blob-activities-dark" aria-hidden="true"></div>
+    <div class="global-blob global-blob-light blob-activities-light" aria-hidden="true"></div>
+    <div class="global-blob global-blob-dark blob-contacts-dark" aria-hidden="true"></div>
+    <div class="global-blob global-blob-light blob-contacts-light" aria-hidden="true"></div>
+    <!-- Ultimi blob: sbordano oltre il contenuto per essere tagliati solo dal bordo inferiore della pagina -->
+    <div class="global-blob global-blob-dark blob-final-dark" aria-hidden="true"></div>
+    <div class="global-blob global-blob-light blob-final-light" aria-hidden="true"></div>
+
+    <app-home />
+    <app-services />
+    <app-activities />
+    <app-contacts />
+  </div>
 </div>
