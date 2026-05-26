@@ -43,5 +43,6 @@ export const textMap = {
     telefono: "347 742 2644",
     indirizzo: "Via Ciociaria, 11, 00162 Roma RM",
     orari: "lunedi-venerdi 08:30-12:30, 14:30-19:00"
-  }
+  },
+  privacy: "Il Titolare del trattamento dei dati è Patrizia Paesani, contattabile all'indirizzo email: infocentropetit@gmail.com. I dati personali (come nome, email, telefono) inseriti volontariamente nel modulo di contatto vengono raccolti al solo fine di rispondere alle tue richieste di informazioni o di prenotazione. La base giuridica è il tuo consenso esplicito, fornito prima dell'invio del modulo. Questo sito non utilizza alcun tipo di cookie (né tecnico né di profilazione) e non fa uso di strumenti di tracciamento o servizi di terze parti. I dati inviati tramite il form non vengono salvati in un database sul sito, ma vengono ricevuti via email e conservati solo per il tempo strettamente necessario a gestire la tua richiesta. In ogni momento puoi richiedere la modifica o la cancellazione dei tuoi dati inviando una semplice comunicazione all'indirizzo email sopra indicato."
 }
