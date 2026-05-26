@@ -2,27 +2,23 @@
   <div class="activities-content">
     <h2 class="section-title">Le nostre attivit&agrave;</h2>
 
-    @defer (on viewport) {
-      <div class="activities-list">
-        @for (activity of activities; track activity.title; let i = $index) {
-          <article class="activity-card" [class.mirrored]="i % 2 !== 0" [class]="'accent-' + (i % 4)">
-            <div class="activity-media">
-              <img
-                [src]="i === 0 ? 'assets/terapia-1.png' : 'assets/terapia-3.jpg'"
-                [alt]="'Immagine per ' + activity.title"
-                loading="lazy"
-              />
-            </div>
-            <div class="activity-body">
-              <h3 class="card-title">{{ activity.title }}</h3>
-              <p class="card-description" [innerHTML]="activity.description"></p>
-              <button class="cta-button" (click)="scrollToContacts()">Richiedi informazioni</button>
-            </div>
-          </article>
-        }
-      </div>
-    } @placeholder {
-      <div class="activities-placeholder"></div>
-    }
+    <div class="activities-list" appIntersectionReveal>
+      @for (activity of activities; track activity.title; let i = $index) {
+        <article class="activity-card" [class.mirrored]="i % 2 !== 0" [class]="'accent-' + (i % 4)">
+          <div class="activity-media">
+            <img
+              [src]="i === 0 ? 'assets/terapia-1.png' : 'assets/terapia-3.jpg'"
+              [alt]="'Immagine per ' + activity.title"
+              loading="lazy"
+            />
+          </div>
+          <div class="activity-body">
+            <h3 class="card-title">{{ activity.title }}</h3>
+            <p class="card-description" [innerHTML]="activity.description"></p>
+            <button class="cta-button" (click)="scrollToContacts()">Richiedi informazioni</button>
+          </div>
+        </article>
+      }
+    </div>
   </div>
 </section>

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { IntersectionRevealDirective } from '../../directives/intersection-reveal.directive';
 import { textMap } from '../../textMap';
 
 @Component({
   selector: 'app-activities',
   standalone: true,
-  imports: [],
+  imports: [IntersectionRevealDirective],
   templateUrl: './activities.html',
   styleUrl: './activities.scss'
 })

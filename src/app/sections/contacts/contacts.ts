@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { IntersectionRevealDirective } from '../../directives/intersection-reveal.directive';
 import { textMap } from '../../textMap';
 
 @Component({
   selector: 'app-contacts',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, IntersectionRevealDirective],
   templateUrl: './contacts.html',
   styleUrl: './contacts.scss'
 })

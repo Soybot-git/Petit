@@ -39,15 +39,42 @@
   position: relative;
   border-radius: 10px;
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+  --rotation: 0deg;
 }
 
-.left-col .desk-item:first-child { transform: rotate(-2deg); }
-.left-col .desk-item:last-child { transform: rotate(2.5deg); }
-.right-col .desk-item { transform: rotate(-1.5deg); }
+.left-col .desk-item:first-child { --rotation: -2deg; }
+.left-col .desk-item:last-child { --rotation: 2.5deg; }
+.right-col .desk-item { --rotation: -1.5deg; }
 
 .desk-item:hover, .desk-item:focus-within {
   transform: rotate(0deg) translateY(-10px) scale(1.01) !important;
   z-index: 10;
+}
+
+/* ========== ANIMAZIONE INGRESSO SCROLL ========== */
+
+.desk-item {
+  opacity: 0;
+  transform: translateY(40px) rotate(var(--rotation));
+}
+
+.desk-objects.is-visible .desk-item {
+  animation: fadeSlideUpRotate 0.6s ease-out forwards;
+}
+
+.desk-objects.is-visible .desk-item.polaroid     { animation-delay: 0.1s; }
+.desk-objects.is-visible .desk-item.post-it      { animation-delay: 0.2s; }
+.desk-objects.is-visible .desk-item.contact-card { animation-delay: 0.3s; }
+
+@keyframes fadeSlideUpRotate {
+  from {
+    opacity: 0;
+    transform: translateY(40px) rotate(var(--rotation));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rotation));
+  }
 }
 
 /* ========== POLAROID ========== */
@@ -224,7 +251,7 @@
 }
 
 .right-col .desk-item.contact-card {
-  transform: none;
+  --rotation: 0deg;
 }
 
 .desk-item.contact-card:hover,
@@ -394,9 +421,11 @@
 /* ========== PREFERENZE ACCESSIBILITA ========== */
 @media (prefers-reduced-motion: reduce) {
   .desk-item { transition: box-shadow 0.2s ease; }
-  .left-col .desk-item:first-child, .left-col .desk-item:last-child, .right-col .desk-item { transform: none; }
+  .left-col .desk-item:first-child, .left-col .desk-item:last-child, .right-col .desk-item { --rotation: 0deg; }
   .desk-item:hover, .desk-item:focus-within { transform: translateY(-4px) !important; }
+  .desk-item.contact-card:hover, .desk-item.contact-card:focus-within { transform: translateY(-4px) scale(1.01) !important; }
   .map-placeholder { transition: none; }
   .form-field input, .form-field textarea, .desk-button { transition: none; }
   .toast-message, .toast-in-place { animation: none; }
+  .desk-item { animation: none !important; opacity: 1; transform: rotate(var(--rotation)); }
 }

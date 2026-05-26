@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { IntersectionRevealDirective } from '../../directives/intersection-reveal.directive';
 import { textMap } from '../../textMap';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [],
+  imports: [IntersectionRevealDirective],
   templateUrl: './services.html',
   styleUrl: './services.scss'
 })

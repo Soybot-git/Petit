@@ -84,3 +84,16 @@ body::after {
 }
 
 /* Le classi .blob, .blob-dark, .blob-light sono ora gestite globalmente in app.scss */
+
+/* ========== KEYFRAME INGRESSO SCROLL ========== */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
