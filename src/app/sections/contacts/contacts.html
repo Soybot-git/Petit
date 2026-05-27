@@ -154,6 +154,27 @@
               </div>
             </div>
 
+            <!-- Privacy -->
+            <div class="form-field privacy-field">
+              <div class="privacy-row">
+                <input
+                  id="contact-privacy"
+                  type="checkbox"
+                  formControlName="privacy"
+                  [attr.aria-invalid]="contactForm.get('privacy')?.invalid && contactForm.get('privacy')?.touched"
+                  aria-describedby="privacy-error"
+                >
+                <label for="contact-privacy">
+                  Ho letto e compreso l'<button type="button" class="link-button" (click)="isModelOpen.set(true)">informativa sulla privacy</button>
+                </label>
+              </div>
+              <div id="privacy-error" class="error-msg" role="alert" aria-live="polite">
+                @if (contactForm.get('privacy')?.invalid && contactForm.get('privacy')?.touched) {
+                  Devi accettare l'informativa sulla privacy per procedere.
+                }
+              </div>
+            </div>
+
             <!-- Pulsante / Toast di conferma -->
             @if (showToast()) {
               <div class="toast-message toast-in-place" role="status" aria-live="polite">
@@ -187,5 +208,14 @@
       </div>
 
     </div>
+
+    @if (isModelOpen()) {
+      <app-model
+        [title]="privacy.title"
+        [text]="privacy.text"
+        (closed)="isModelOpen.set(false)"
+      />
+    }
+
   </div>
 </section>
