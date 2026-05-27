@@ -1,0 +1,21 @@
+<footer class="footer-section" aria-label="Pie di pagina">
+  <div class="footer-inner">
+    <div class="footer-text" [innerHTML]="footerText"></div>
+
+    <button
+      type="button"
+      class="privacy-link"
+      (click)="isModelOpen.set(true)"
+    >
+      Informativa sulla privacy
+    </button>
+  </div>
+</footer>
+
+@if (isModelOpen()) {
+  <app-model
+    [title]="privacy.title"
+    [text]="privacy.text"
+    (closed)="isModelOpen.set(false)"
+  />
+}

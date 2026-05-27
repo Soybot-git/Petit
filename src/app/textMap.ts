@@ -35,7 +35,7 @@ export const textMap = {
     },
     {
       title: "Petit Summer Camp: Socializzazione, Gioco e Crescita Speciale",
-      description: "<p>L'estate è il momento perfetto per unire spensieratezza, crescita relazionale e inclusione. Per questo, il centro Petit sta progettando un <strong>campo estivo dedicato</strong>, sicuro, stimolante e guidato da specialisti. Il nostro obiettivo è offrire:</p><ul><li><strong>Divertimento e socializzazione:</strong> perfettamente integrati a un costante supporto educativo.</li><li><strong>Autonomia e crescita:</strong> percorsi mirati a valorizzare le potenzialità di ogni bambino.</li><li><strong>Qualità e attenzione:</strong> i dettagli logistici sono in via di definizione e i posti saranno limitati per garantire una cura terapeutica ottimale.</li></ul>"
+      description: "L'estate è il momento perfetto per unire spensieratezza, crescita relazionale e inclusione. Per questo, il centro Petit sta progettando un <strong>campo estivo dedicato</strong>, sicuro, stimolante e guidato da specialisti. Il nostro obiettivo è offrire:<ul><li><strong>Divertimento e socializzazione:</strong> perfettamente integrati a un costante supporto educativo.</li><li><strong>Autonomia e crescita:</strong> percorsi mirati a valorizzare le potenzialità di ogni bambino.</li><li><strong>Qualità e attenzione:</strong> i dettagli logistici sono in via di definizione e i posti saranno limitati per garantire una cura terapeutica ottimale.</li></ul>"
     }
   ],
   contacts: {
@@ -44,6 +44,7 @@ export const textMap = {
     indirizzo: "Via Ciociaria, 11, 00162 Roma RM",
     orari: "lunedi-venerdi 08:30-12:30, 14:30-19:00"
   },
+  footer: "Petit - Centro polispecialistico dell'età evolutiva di Patrizia Paesani</br>TNPEE con master ABA, Iscr. Ordine PSTRP n491</br>Via Ciociaria, 11, 00162 Roma RM</br>P.IVA 13674611002",
   privacy: {
     title: "Informativa sulla Privacy",
     text: "Il Titolare del trattamento dei dati è Patrizia Paesani, contattabile all'indirizzo email: infocentropetit@gmail.com. I dati personali inseriti volontariamente nel modulo di contatto vengono raccolti al solo fine di rispondere alle tue richieste di informazioni o di prenotazione. La base giuridica è il tuo consenso esplicito, fornito prima dell'invio del modulo. Questo sito non utilizza alcun tipo di cookie e non fa uso di strumenti di tracciamento o servizi di terze parti. I dati inviati tramite il form non vengono salvati in un database sul sito, ma vengono ricevuti via email e conservati solo per il tempo strettamente necessario a gestire la tua richiesta. In ogni momento puoi richiedere la modifica o la cancellazione dei tuoi dati inviando una semplice comunicazione all'indirizzo email sopra indicato."
