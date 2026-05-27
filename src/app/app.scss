@@ -47,6 +47,25 @@
   animation-delay: -2s;
 }
 
+/* ========== HERO LEFT: alto a sinistra ========== */
+.blob-hero-left-dark {
+  width: 45vw;
+  height: 45vw;
+  top: -5vh;
+  left: -10%;
+  background-color: var(--blob-services);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.blob-hero-left-light {
+  width: 42vw;
+  height: 48vw;
+  top: -2vh;
+  left: -6%;
+  background-color: var(--blob-services);
+  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+}
+
 /* ========== HOME: alto a destra ========== */
 .blob-home-dark {
   width: 45vw;
@@ -144,18 +163,11 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-  .blob-home-dark {
-    width: 67.5vw;
-    height: 67.5vw;
-    top: -8vh;
-    right: -14%;
-  }
-
+  .blob-hero-left-dark,
+  .blob-hero-left-light,
+  .blob-home-dark,
   .blob-home-light {
-    width: 63vw;
-    height: 72vw;
-    top: -5vh;
-    right: -10%;
+    display: none;
   }
 
   .blob-services-dark {
