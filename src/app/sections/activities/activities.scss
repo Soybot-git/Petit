@@ -16,16 +16,6 @@
   margin: 0 auto;
 }
 
-.section-title {
-  text-align: center;
-  font-family: 'Comfortaa', sans-serif;
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-dark);
-  margin-bottom: clamp(2rem, 5vh, 4rem);
-  text-shadow: 0 2px 4px rgba(42, 62, 60, 0.15);
-}
-
 .activities-list {
   display: flex;
   flex-direction: column;
@@ -148,10 +138,6 @@
     outline: 3px solid var(--text-dark);
     outline-offset: 3px;
   }
-}
-
-.activities-placeholder {
-  min-height: 50vh;
 }
 
 /* Tablet */

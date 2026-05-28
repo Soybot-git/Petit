@@ -12,16 +12,6 @@
   z-index: 1;
 }
 
-.desk-title {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--text-dark);
-  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 4px rgba(42, 62, 60, 0.15);
-}
-
 .desk-objects {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -249,7 +239,6 @@
   border-radius: 32px 48px 28px 42px;
   padding: clamp(1.5rem, 2.5vw, 2.5rem);
   box-shadow: 0 8px 32px rgba(42, 62, 60, 0.06);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .right-col .desk-item.contact-card {

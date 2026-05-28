@@ -46,17 +46,6 @@
   color: var(--text-dark);
 }
 
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .home-nav {
   display: flex;
   justify-content: center;
@@ -94,10 +83,4 @@
 
 .cta-button:active {
   transform: translateY(-1px);
-}
-
-.cta-icon {
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
 }
