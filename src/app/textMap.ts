@@ -30,10 +30,12 @@ export const textMap = {
   ],
   activities: [
     {
+      src: "assets/terapia-1.jpg",
       title: "Spazio di Ascolto e Primo Orientamento",
       description: "Sappiamo che i primi segnali di difficoltà di un bambino possono disorientare. Per questo, il centro Petit offre un primo incontro <strong>completamente gratuito</strong> per ascoltarvi e orientarvi. Insieme potremo:<ul><li><strong>Analizzare</strong> i comportamenti e le fatiche riscontrate nel quotidiano.</li><li><strong>Valutare</strong> se le difficoltà rientrino nella norma o richiedano approfondimenti sul neurosviluppo.</li><li><strong>Indirizzarvi</strong> con chiarezza verso il percorso diagnostico o medico più corretto.</li><li><strong>Gettare le basi</strong> per un programma di supporto e aiuto personalizzato.</li></ul>"
     },
     {
+      src: "assets/terapia-2.jpg",
       title: "Petit Summer Camp: Socializzazione, Gioco e Crescita Speciale",
       description: "L'estate è il momento perfetto per unire spensieratezza, crescita relazionale e inclusione. Per questo, il centro Petit sta progettando un <strong>campo estivo dedicato</strong>, sicuro, stimolante e guidato da specialisti. Il nostro obiettivo è offrire:<ul><li><strong>Divertimento e socializzazione:</strong> perfettamente integrati a un costante supporto educativo.</li><li><strong>Autonomia e crescita:</strong> percorsi mirati a valorizzare le potenzialità di ogni bambino.</li><li><strong>Qualità e attenzione:</strong> i dettagli logistici sono in via di definizione e i posti saranno limitati per garantire una cura terapeutica ottimale.</li></ul>"
     }

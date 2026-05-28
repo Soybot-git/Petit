@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IntersectionRevealDirective } from '../../directives/intersection-reveal.directive';
 import { Model } from '../../shared/model/model';
 import { textMap } from '../../textMap';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contacts',
@@ -12,6 +13,7 @@ import { textMap } from '../../textMap';
 })
 export class Contacts {
   private readonly fb = inject(FormBuilder);
+  private readonly http = inject(HttpClient);
   protected readonly contacts = textMap.contacts;
   protected readonly privacy = textMap.privacy;
 
@@ -34,14 +36,11 @@ export class Contacts {
 
     this.isSubmitting.set(true);
 
-    setTimeout(() => {
+    this.http.post('https://formspree.io/f/mnjrlezb', this.contactForm.value).subscribe(res => {
       this.isSubmitting.set(false);
       this.contactForm.reset();
       this.showToast.set(true);
-
-      setTimeout(() => {
-        this.showToast.set(false);
-      }, 3000);
-    }, 1200);
+      setTimeout(() => {this.showToast.set(false)}, 3000);
+    });
   }
 }

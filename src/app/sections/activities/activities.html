@@ -7,7 +7,7 @@
         <article class="activity-card" [class.mirrored]="i % 2 !== 0" [class]="'accent-' + (i % 4)">
           <div class="activity-media">
             <img
-              [src]="i === 0 ? 'assets/terapia-1.png' : 'assets/terapia-3.jpg'"
+              [src]="activity.src"
               [alt]="'Immagine per ' + activity.title"
               loading="lazy"
             />
