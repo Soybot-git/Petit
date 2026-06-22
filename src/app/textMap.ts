@@ -1,6 +1,6 @@
 export const textMap = {
   home: {
-    text: "<strong>Petit</strong> è un centro polispecialistico dell'età evolutiva specializzato nell'abilitazione e <strong>riabilitazione dei disturbi del neurosviluppo</strong>.<br> Offriamo una <strong>presa in carico terapeutica globale</strong> e grazie a un approccio multidisciplinare e a differenti metodologie riabilitative, seguiamo ogni paziente con la massima cura per garantirne il benessere e l'evoluzione."
+    text: "<strong>Petit</strong> è un centro polispecialistico dell'età evolutiva specializzato nella <strong>riabilitazione dei disturbi del neurosviluppo</strong>.<br> Offriamo una <strong>presa in carico terapeutica globale</strong> e grazie a un approccio multidisciplinare e a differenti metodologie riabilitative, seguiamo ogni paziente con la massima cura per garantirne il benessere e l'evoluzione."
   },
   services: [
     {
