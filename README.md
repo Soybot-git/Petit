@@ -17,3 +17,4 @@ npm run dev   # ng serve — avvia il server di sviluppo su http://localhost:420
 npm run build # ng build — build di produzione in dist/
 npm run test  # ng test — esegue i test con Vitest
 ```
+By SoyBot <\°=°/>
